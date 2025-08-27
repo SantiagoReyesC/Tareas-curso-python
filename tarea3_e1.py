@@ -1,4 +1,7 @@
 #Contar letras en un texto, variable tipo string
+#insertar texto
+text = ''' 
+'''
 xx = text.replace('\n', ' ')
 comp = set (xx)
 
@@ -7,3 +10,4 @@ for letra in list(comp):
      num = xx.count(letra)
 
      print("frec de "+letra + "=" + str(num))
+
