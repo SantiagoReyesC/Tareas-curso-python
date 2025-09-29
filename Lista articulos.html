@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Visor de articulos de Santiago Reyes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selecciona un articulo</h1>
+
+    <!-- Botones que abren cada archivo PDF -->
+    <button onclick="mostrarPDF('Gotho Yoshimatsu 2007.pdf')">Gotho Yoshimatsu 2007</button>
+    <button onclick="mostrarPDF('Ab histamine Fekete 2003__.pdf')">Ab histamine Fekete 2003</button>
+    <button onclick="mostrarPDF('Bryan Roth 2009 CNO.pdf')">Bryan Roth 2009 CNO</button>
+    <button onclick="mostrarPDF('Kadar 2010.pdf')">Kadar 2010</button>
+    <button onclick="mostrarPDF('Moriwaki 2015.pdf')">Moriwaki 2015</button>
+    <button onclick="mostrarPDF('Perello 2007.pdf')">Perello 2007</button>
+    <button onclick="mostrarPDF('Perello 2014.pdf')">Perello 2014</button>
+    <button onclick="mostrarPDF('Perello 2019.pdf')">Perello 2019</button>
+    <button onclick="mostrarPDF('Sanchez-Jaramillo 2022.pdf')">Sanchez-Jaramillo 2022</button>
+    <button onclick="mostrarPDF('Sarvari Fekete Histamine2012.pdf')">Sarvari Fekete Histamine2012</button>
+    <button onclick="mostrarPDF('Umehara 2012.pdf')">Umehara 2012</button>
+    <button onclick="mostrarPDF('Wittman 2009.pdf')">Wittman 2009</button>
+
+
+    <!-- Visor PDF -->
+    <iframe id="visorPDF" src=""></iframe>
+
+    <script>
+        function mostrarPDF(nombreArchivo) {
+            document.getElementById('visorPDF').src = nombreArchivo;
+        }
+    </script>
+
+</body>
+</html>
