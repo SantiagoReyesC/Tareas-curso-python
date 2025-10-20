@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion septiembre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .button-container {
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+        
+        
+        
+        #info-display {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 150px;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .info-content {
+            display: none;
+        }
+        
+        .info-content.active {
+            display: block;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estructuras cerebrales</h1>
+    
+    <div class="button-container">
+        <button onclick="showInfo('info1')">Septum</button>
+        <button onclick="showInfo('info2')">Corteza prefrontal</button>
+        <button onclick="showInfo('info3')">Hipocampo</button>
+        <button onclick="showInfo('info4')">Hipotalamo</button>
+        <button onclick="showInfo('info5')">Cuerpo Calloso</button>
+    </div>
+    
+    <div id="info-display">
+        <div id="info1" class="info-content active">
+            <h2>Septum</h2>
+            <p>La actividad en el septum se ha relacionado con la motivación para la exploración y la búsqueda de recompensas, y se ha demostrado que la estimulación eléctrica del septum puede aumentar la actividad de búsqueda de alimentos y agua en animales de laboratorio. Además, el septum también está implicado en la regulación del sueño y el ritmo circadiano, que es el ciclo de sueño-vigilia del cuerpo.</p>
+            
+        </div>
+        
+        <div id="info2" class="info-content">
+            <h2>Corteza prefrontal</h2>
+            <p>La corteza prefrontal es la parte frontal del cerebro responsable de funciones cognitivas superiores como la planificación, la toma de decisiones, la regulación emocional, la atención y el lenguaje. Se encuentra en la parte más anterior del lóbulo frontal y es una de las últimas áreas del cerebro en madurar completamente, completando su desarrollo aproximadamente entre los 25 y 30 años</p>
+        </div>
+        
+        <div id="info3" class="info-content">
+            <h2>Hipocampo</h2>
+            <p>El hipocampo es una estructura cerebral ubicada en el lóbulo temporal, fundamental para el aprendizaje, la memoria (tanto a corto como a largo plazo) y la navegación espacial. Se encuentra en cada hemisferio, pertenece al sistema límbico y su forma recuerda a la de un caballito de mar, de donde deriva su nombre. </p>
+            
+        </div>
+        
+        <div id="info4" class="info-content">
+            <h2>Hipotalamo</h2>
+            <p>El hipotálamo es una pequeña región del cerebro que regula funciones vitales como la temperatura corporal, el hambre, la sed, el sueño, el estado de ánimo y la frecuencia cardíaca. Actúa como un centro de control que conecta el sistema nervioso con el sistema endocrino, produciendo hormonas que controlan la glándula pituitaria y, en consecuencia, muchas funciones del cuerpo. Una disfunción en esta área puede provocar problemas como aumento de peso, sed excesiva, problemas de tiroides o de sueño</p>
+            
+        </div>
+        
+        <div id="info5" class="info-content">
+            <h2>Cuerpo Calloso</h2>
+            <p>El cuerpo calloso es la estructura que se encuentra en lo profundo del cerebro y que conecta los hemisferios cerebrales derecho e izquierdo, coordinando las funciones de ambos.</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(infoId) {
+            // Hide all info content
+            const allInfo = document.querySelectorAll('.info-content');
+            allInfo.forEach(info => {
+                info.classList.remove('active');
+            });
+            
+            // Show the selected info
+            const selectedInfo = document.getElementById(infoId);
+            selectedInfo.classList.add('active');
+        }
+        
+        // Show first info by default
+        showInfo('info1');
+    </script>
+</body>
+</html>
